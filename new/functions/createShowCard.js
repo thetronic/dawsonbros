@@ -24,7 +24,7 @@ export default function createShowCard(show){
   // showCard.onclick = function() { 
   //   location.href = 'show.html?id=' + id 
   // }
-  showImage.style.backgroundImage = 'url(\'' + show['imageurl'] + '\')'
+  showImage.style.backgroundImage = 'url(\'' + show['imageurl'].replace("http:", "https:") + '\')'
   if (show['show'] !== ''){
     showTitle.innerHTML = show['show'].toUpperCase()
     showOverlay.appendChild(showTitle)
