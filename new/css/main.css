@@ -16,7 +16,7 @@ body {
 
 .titleImage {
   display: flex;
-  background-image: url(images/dawsonbroslogo3.png);
+  background-image: url(../images/dawsonbroslogo3.png);
   background-repeat:no-repeat;
   background-size: cover;
   width: 550px;
@@ -40,6 +40,7 @@ body {
   justify-content: space-between;
   height: fit-content;
   width: 650px;
+  height: 260px;
 }
 
 .showListBox {
@@ -89,7 +90,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  background-image: url('images/dawsonbroslong.jpg')
+  background-image: url('../images/dawsonbroslong.jpg')
 }
 
 

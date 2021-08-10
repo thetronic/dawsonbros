@@ -24,6 +24,14 @@
   position: relative;
 }
 
+.showPlaceholder {
+  width: 200px;
+  height: 260px;
+  margin: 0px 0px 0px 0px;
+  cursor: default;
+  background-color: var(--cardcolorgradient1);
+}
+
 .showImage {
   display: flex;
   justify-content:center;
