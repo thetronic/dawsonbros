@@ -2,14 +2,19 @@
   --titlecolor: #d8d7d7;
   --subtitlecolor: #b1b0b0;
   --subsubtitlecolor: #7e7d7d;
-  --cardcolorsolid: var(--cardcolor);
-  --cardcolortransparent: var(--cardcolor);
+  --backgroundcolor: #6e805c;
+  --cardcolor: #1e2a3a00;
+  --cardcolorgradient1: #1e2a3aff;
+  --cardcolorgradient2:#1e2a3a00;
+  --linecolor:#ffffffee;
+  --linecoloralpha:#ffffff00;
 }
 
 .showCard {
   display: flex;
   flex-direction: column;
-  background-color: var(--cardcolorsolid);
+  background-color: var(--cardcolorgradient1);
+  justify-content:top;
   align-items: center;
   width: 200px;
   height: 260px;
@@ -24,7 +29,7 @@
   height: 260px;
   margin: 0px 0px 0px 0px;
   cursor: default;
-  background-color: var(--cardcolorsolid);
+  background-color: var(--cardcolorgradient1);
 }
 
 .showImage {
@@ -56,11 +61,11 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-top-color: var(--linecolorsolid);
+  border-top-color: var(--linecolor);
   border-top-width: 3;
   border-top-style: solid;
   opacity: 1;
-  background-image: linear-gradient(var(--cardcolortransparent), var(--cardcolorsolid) 20%);
+  background-image: linear-gradient(var(--cardcolorgradient2), var(--cardcolorgradient1) 20%);
   transition: all 0.25s;
   
 }
