@@ -1,9 +1,29 @@
+:root {
+  --backgroundcolor: rgb(242, 240, 212);
+  --boxcolor: #1d2939;
+  --cardcolor: #1d2939;
+  --textbackgroundcolor: rgb(255, 255, 255);
+  --textcolor: rgb(242, 242, 242);
+  --linecolor: var(--textcolor);
+  --linecolorsolid: var(--linecolor);
+  --linecoloralpha: var(--linecolor);
+}
+
 body {
-  background: rgb(110, 128, 92);
+  background-color: var(--backgroundcolor);
+  background-image: url(../images/halftone.png);
   margin: 0px;
   padding: 0px;
   font-family: "Karla";
-  
+  color: var(--textcolor);
+}
+
+.vignette {
+  content: '';
+  position: fixed;
+  pointer-events: none;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: radial-gradient(circle, transparent 50%, black 150%);
 }
 
 .topContainer {
@@ -63,7 +83,8 @@ body {
 .box {
   display: flex;
   /* border-radius: 0px 0px 20px 20px; */
-  background-color: #f1f1f1;
+  background-color: var(--textbackgroundcolor);
+  color: var(--boxcolor);
   width: 650px;
   margin: 0px;
 }
@@ -71,7 +92,17 @@ body {
 .titleBox {
   display: flex;
   border-radius: 0px;
-  background-color: #f1f1f1;
+  background-color: var(--boxcolor);
+  width: 650px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleBox:hover {
+  display: flex;
+  border-radius: 0px;
+  background-color: var(--boxcolor);
   width: 650px;
   margin: 20px;
   align-items: center;
@@ -93,15 +124,9 @@ body {
   background-image: url('../images/dawsonbroslong.jpg')
 }
 
-
 .titleText {
   margin: 10px;
   font-weight:bolder;
-  
 }
 
 
-
-.bottomBox {
-
-}
