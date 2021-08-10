@@ -1,0 +1,147 @@
+:root {
+  --titlecolor: #d8d7d7;
+  --subtitlecolor: #b1b0b0;
+  --subsubtitlecolor: #7e7d7d;
+  --backgroundcolor: #6e805c;
+  --cardcolor: #1e2a3a00;
+  --cardcolorgradient1: #1e2a3aff;
+  --cardcolorgradient2:#1e2a3a00;
+  --linecolor:#ffffffee;
+  --linecoloralpha:#ffffff00;
+}
+
+.showCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cardcolorgradient1);
+  justify-content:top;
+  align-items: center;
+  width: 200px;
+  height: 260px;
+  margin: 0px 0px 0px 0px;
+  overflow: hidden;
+  cursor: default; 
+  position: relative;
+}
+
+.showImage {
+  display: flex;
+  justify-content:center;
+  align-items:flex-end;
+  width: 200px;
+  height: 200px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  cursor:pointer;
+}
+
+.showOverlay {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cardcolor);
+  color: var(--titlecolor);
+  width: 200px;
+  height: 60px;
+  font-size: 8pt;
+  margin: 0px 0px 0px 0px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-color: var(--linecolor);
+  border-top-width: 3;
+  border-top-style: solid;
+  opacity: 1;
+  background-image: linear-gradient(var(--cardcolorgradient2), var(--cardcolorgradient1) 20%);
+  transition: all 0.25s;
+  
+}
+
+.showCard:hover .showOverlay {
+  height: 250px;
+  border-top-color: var(--linecoloralpha);
+}
+
+.showTitle {
+  color: var(--titlecolor);
+  bottom: none;
+  font-size: 14px;
+  font-weight: bolder;
+  line-height: 90%;
+  width: 90%;
+  transition: all 0.25s;
+}
+  
+.showChannel {
+  color: var(--subtitlecolor);
+  font-weight:lighter;
+  width: 90%;
+  transition: all 0.25s;
+}
+
+.showJob {
+  color: var(--subsubtitlecolor);
+  font-size: 10px;
+  width: 90%;
+  opacity: 0;
+  display: none;
+  transition: all 0.25s;
+}
+
+.showCard:hover .showJob {
+  display:flex;
+  opacity: 1;
+}
+
+.showStarring {
+  color: var(--titlecolor);
+  font-size: 9px;
+  width: 90%;
+  margin: 5px 0px 0px 0px;
+  opacity: 0;
+  display: none;
+  transition: all 0.25s;
+}
+
+.showCard:hover .showStarring {
+  display:flex;
+  opacity: 1;
+}
+
+.showProducers {
+  color: var(--subtitlecolor);
+  font-size: 9px;
+  width: 90%;
+  margin: 5px 0px 10px 0px;
+  opacity: 0;
+  display: none;
+  transition: all 0.25s;
+}
+
+.showCard:hover .showProducers {
+  display:flex;
+  opacity: 1;
+}
+
+.showAwards {
+  flex-direction: column;
+  color: var(--subsubtitlecolor);
+  font-size: 8px;
+  padding-left: 1.5em;
+  text-indent:-1.5em;
+  width: 90%;
+  opacity: 0;
+  display: none;
+  transition: all 0.25s;
+}
+
+.showCard:hover .showAwards {
+  display:flex;
+  opacity: 1;
+}
+

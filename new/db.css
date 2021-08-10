@@ -1,0 +1,106 @@
+body {
+  background: rgb(110, 128, 92);
+  margin: 0px;
+  padding: 0px;
+  font-family: "Karla";
+  
+}
+
+.topContainer {
+  display: flex;
+  height: 160px;
+  margin: 0px;
+  flex-direction: row;
+  justify-content: center;
+  }
+
+.titleImage {
+  display: flex;
+  background-image: url(images/dawsonbroslogo3.png);
+  background-repeat:no-repeat;
+  background-size: cover;
+  width: 550px;
+  height: 124px;
+  padding: 0px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+}
+
+.latestBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: fit-content;
+  width: 650px;
+}
+
+.showListBox {
+  display: flex;
+  overflow: hidden;
+  height: auto;
+  width: 650px;
+
+}
+
+.showList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  gap: 16px;
+}
+
+.box {
+  display: flex;
+  /* border-radius: 0px 0px 20px 20px; */
+  background-color: #f1f1f1;
+  width: 650px;
+  margin: 0px;
+}
+
+.titleBox {
+  display: flex;
+  border-radius: 0px;
+  background-color: #f1f1f1;
+  width: 650px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxText {
+  margin: 20px;
+}
+.boxImage {
+  margin: 0px;
+  height: 230px;
+  width: 650px;
+  /* border-radius: 20px 20px 0px 0px; */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-image: url('images/dawsonbroslong.jpg')
+}
+
+
+.titleText {
+  margin: 10px;
+  font-weight:bolder;
+  
+}
+
+
+
+.bottomBox {
+
+}
