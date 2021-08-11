@@ -5,6 +5,7 @@ const requestURL = 'https://spreadsheets.google.com/feeds/list/1bLqN7oA2nNjZID7a
 const request = new XMLHttpRequest()
 request.open('GET', requestURL, true)
 request.send()
+let requestCounter = 10
 
 function updatePage(jsonShows){
   const allShows = []
@@ -36,5 +37,14 @@ request.onload = function() {
   if (this.readyState === 4 && this.status === 200) {
     var googleSheetsJSON = JSON.parse(this.responseText)
     handleLoad(googleSheetsJSON)
+  } else {
+    requestCounter = requestCounter - 1
+    console.log('Failed To Connect: ' + requestCounter)
+    if (requestCounter >= 0){
+      request.open('GET', requestURL, true)
+      request.send()
+    } else {
+      console.log('Connection Failed')
+    }
   }
 }
