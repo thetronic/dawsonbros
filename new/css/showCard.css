@@ -66,7 +66,7 @@
 }
 
 .showCard:hover .showOverlay {
-  height: 250px;
+  height: 230px;
   border-top-color: var(--linecoloralpha);
 }
 
