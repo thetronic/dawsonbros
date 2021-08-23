@@ -1,261 +1,322 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head>
-  
+<html>
+
+<head>
+
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
 
-  
+
   <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
 
-* {
-   margin: 0px;
-   padding: 0px;
-}
+    a:link {
+      text-decoration: none;
+    }
 
-a:link {
-    text-decoration: none;
-}
+    a:visited {
+      text-decoration: none;
+    }
 
-a:visited {
-    text-decoration: none;
-}
+    hr.style-one {
+      border: 0;
+      height: 1px;
+      background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+      background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+      background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
 
-hr.style-one {
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-}
+    .topbar {
+      border: none;
+      background: #000000 none repeat scroll 0%;
+      height: 65px;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      font-weight: normal;
+      color: #eeeeee;
+      vertical-align: middle;
+      letter-spacing: 3px;
+      text-align: center;
+    }
 
-.topbar {
-border: none;
-background: #000000 none repeat scroll 0%;
-height: 65px;
-font-family: Georgia,serif;
-font-size: 20px;
-font-weight: normal;
-color: #eeeeee;
-vertical-align: middle;
-letter-spacing: 3px;
-text-align: center;
-}
+    .topbar a {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      font-weight: normal;
+      color: #cccccc;
+    }
 
-.topbar a{
-font-family: Georgia,serif;
-font-size: 20px;
-font-weight: normal;
-color: #cccccc;
-}
+    .bottombar {
+      border: none;
+      background: #000000 none repeat scroll 0%;
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      height: 65px;
+      width: 100%;
+      font-family: Georgia, serif;
+      font-size: 18px;
+      font-weight: normal;
+      color: #dddddd;
+      letter-spacing: 2px;
+    }
 
-.bottombar {
-border: none;
-background: #000000 none repeat scroll 0%;
-position: fixed;
-bottom: 0px;
-left: 0px;
-height: 65px;
-width: 100%;
-font-family: Georgia,serif;
-font-size: 18px;
-font-weight: normal;
-color: #dddddd;
-letter-spacing: 2px;
-}
+    .mainStyle {
+      padding-bottom: 65px;
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: #777777;
+      max-width: 960px;
+      margin: 0 auto;
+    }
 
-.mainStyle {
-padding-bottom: 65px;
-font-family: Georgia,serif;
-font-size: 15px;
-color: #777777;
-max-width: 960px;
-margin: 0 auto;
-}
+    .graphicbar {
+      background-image: url('images/script.jpg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-overflow: hidden;
+      text-align: center;
+    }
 
-.graphicbar {
-	background-image:url('images/script.jpg');
-	background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-overflow: hidden;
-    text-align: center;
-}
+    .bar {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-overflow: hidden;
+      text-align: center;
+    }
 
-.bar {
-	background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-overflow: hidden;
-    text-align: center;
-}
+    .bartext {
+      font-family: Georgia, serif;
+      font-size: 30px;
+      color: #ffffff;
+      text-align: left;
+      padding: 15px;
+      font-weight: normal;
+    }
 
-.bartext {
-font-family: Georgia,serif;
-font-size: 30px;
-color: #ffffff;
-text-align: left;
-padding: 15px;
-font-weight: normal;
-}
+    img.logo {
+      width: 550px;
+      height: 124px;
+      background: url(images/dawsonbroslogoS.png);
+      background-size: cover;
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
 
-img.logo {
-	width: 550px;
-	height: 124px;
-	background: url(images/dawsonbroslogoS.png);
-	background-size: cover;
-	padding: 0;
-    margin: 0;
-    border: 0;
-}
+    .show {
+      padding-left: 7px;
+      color: #444444;
+      font-weight:
+        bold;
+      font-family: Georgia, serif;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
 
-.show { 
-padding-left: 7px;
-color: #444444; font-weight:
-bold; font-family: Georgia,serif; font-size: 13px;
-text-transform: uppercase;
-}
-.channel { padding-left: 7px;color: #666666;font-family: Georgia,serif; font-size: 12px;
-}
-.job { padding-left: 7px;font-family: Georgia,serif; font-size: 12px;
-font-style: italic;
-}
-.starring { padding-left: 7px;font-family: Georgia,serif; font-size: 10px;
-}
-.awards {padding-top: 4px; color: #444444; font-family: Georgia,serif; font-size: 8px;
-text-transform: uppercase; font-style: normal; font-weight: bold;
-}
-.center-cropped {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-overflow: hidden;
-}
+    .channel {
+      padding-left: 7px;
+      color: #666666;
+      font-family: Georgia, serif;
+      font-size: 12px;
+    }
 
-li.topline {
-		position: relative;
-		top: 25px;
-		font-size: 11px;
-        border: 0px ;
-        display: -moz-inline-stack;
-        display: inline-block;
-        vertical-align: top;
-        margin: 0px;
-        padding-right: 13px;
-		padding-left: 13px;
-        zoom: 1;
-        *display: inline;
+    .job {
+      padding-left: 7px;
+      font-family: Georgia, serif;
+      font-size: 12px;
+      font-style: italic;
+    }
+
+    .starring {
+      padding-left: 7px;
+      font-family: Georgia, serif;
+      font-size: 10px;
+    }
+
+    .awards {
+      padding-top: 4px;
+      color: #444444;
+      font-family: Georgia, serif;
+      font-size: 8px;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    .center-cropped {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-overflow: hidden;
+    }
+
+    li.topline {
+      position: relative;
+      top: 25px;
+      font-size: 11px;
+      border: 0px;
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0px;
+      padding-right: 13px;
+      padding-left: 13px;
+      zoom: 1;
+      *display: inline;
     }
 
 
-li.videos {
-        width: 410px;
-        min-height: 130px;
-        border: 0px ;
-        display: -moz-inline-stack;
-        display: inline-block;
-        vertical-align: top;
-        margin: 5px;
-        zoom: 1;
-        *display: inline;
-        _height: 150px;
+    li.videos {
+      width: 410px;
+      min-height: 130px;
+      border: 0px;
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: top;
+      margin: 5px;
+      zoom: 1;
+      *display: inline;
+      _height: 150px;
     }
-
   </style>
   <title>Dawson Bros. - Our Work</title>
- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
   </script>
-  
+
   <script type="text/javascript">
-$(document).ready(function() {
 
-$(function listBooks() {
+    console.log("Hello");
+    $(document).ready(function () {
+      console.log("Hello2");
+      $(function listBooks() {
+        console.log("Hello3");
+        $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/1bLqN7oA2nNjZID7aGwhjX5z2btnSh3bmt2Y-CAt8PiY/values/Sheet1?alt=JSON&key=AIzaSyCFNHPo-SnAqhK1IHB9xZxpQJyb-yfLooQ",
 
-$.getJSON( "https://spreadsheets.google.com/feeds/list/1bLqN7oA2nNjZID7aGwhjX5z2btnSh3bmt2Y-CAt8PiY/od6/public/values?alt=json-in-script&callback=?",
+          function (data) {
+            console.log("Hello4");
 
+            console.log(data.values);
 
-function (data) {
+            data.values.shift();
 
-$('div#show-list').append('<ul class="items"></ul>');
+            $('div#show-list').append('<ul class="items"></ul>');
 
-$.each(data.feed.entry, function(i,entry) {
+            $.each(data.values, function (i, entry) {
 
-var item = '<hr class="style-one"><br>';
+              var item = '<hr class="style-one"><br>';
 
-item += '<table style="text-align: left;" border="0" cellpadding="0" cellspacing="0" width="100%"><tr>';
-	
-item += '<td style="vertical-align: top; width: 100px; height: 100px;">';
-if (entry.gsx$imageurl.$t) {
-item += '<div class="center-cropped" style="background-image: url(' + entry.gsx$imageurl.$t + ');">';
-}
-else {
-item += '<div class="center-cropped" style="background-image: url(http://leicesterexchanges.com/wp-content/uploads/2013/02/tv.gif);">';}
-
-item += '<div style="height: 100px;">&nbsp; </div>';
-item += '</td>';
-
-
-item += '<td style="vertical-align: top;">';
-
-item += '<div class="show">' + entry.gsx$show.$t + '</div>';
-if (entry.gsx$producers1.$t) {
-item += '<div class="channel">(' + entry.gsx$channel.$t + ')</div>';
-}
-item += '<div class="job">' + entry.gsx$job.$t + '</div>';
-item += '<div class="starring">' + entry.gsx$starring.$t + '</div>';
-if (entry.gsx$producers1.$t) {
-item += '<div class="starring">' + entry.gsx$producers1.$t + '</div>';
-}
-if (entry.gsx$producers2.$t) {
-item += '<div class="starring">' + entry.gsx$producers2.$t + '</div>';
-}
-
-item += '</td>';
-if (entry.gsx$awards.$t) {
-item += '<tr><td colspan="2" style="vertical-align: top;">'
+              var imageurl = entry[9];
+              var show = entry[3];
+              var producers1 = entry[7];
+              var producers2 = entry[8];
+              var channel = entry[4];
+              var job = entry[5];
+              var starring = entry[6];
+              var awards = entry[10];
+              var awards1 = entry[11];
+              var awards2 = entry[12];
+              var awards3 = entry[13];
+              var awards4 = entry[14];
 
 
-item += '<div class="awards">' + entry.gsx$awards.$t + '</div>';
+              item += '<table style="text-align: left;" border="0" cellpadding="0" cellspacing="0" width="100%"><tr>';
 
-if (entry.gsx$awards1.$t) {
-item += '<div class="awards">' + entry.gsx$awards1.$t + '</div>';
-}
-if (entry.gsx$awards2.$t) {
-item += '<div class="awards">' + entry.gsx$awards2.$t + '</div>';
-}
-if (entry.gsx$awards3.$t) {
-item += '<div class="awards">' + entry.gsx$awards3.$t + '</div>';
-}
-if (entry.gsx$awards4.$t) {
-item += '<div class="awards">' + entry.gsx$awards4.$t + '</div>';
-}
+              item += '<td style="vertical-align: top; width: 100px; height: 100px;">';
+              if (imageurl) {
+                item += '<div class="center-cropped" style="background-image: url(' + imageurl + ');">';
+              }
+              else {
+                item += '<div class="center-cropped" style="background-image: url(http://leicesterexchanges.com/wp-content/uploads/2013/02/tv.gif);">';
+              }
 
-item += '</td>';
-}
-item += '</tr></table>';
+              item += '<div style="height: 100px;">&nbsp; </div>';
+              item += '</td>';
 
 
-$('.items').append('<li class="videos">' + item + '</li>');
+              item += '<td style="vertical-align: top;">';
 
-});
-});
-});
-});
+              item += '<div class="show">' + show + '</div>';
+              if (producers1) {
+                item += '<div class="channel">(' + channel + ')</div>';
+              }
+              item += '<div class="job">' + job + '</div>';
+              item += '<div class="starring">' + starring + '</div>';
+              if (producers1) {
+                item += '<div class="starring">' + producers1 + '</div>';
+              }
+              if (producers2) {
+                item += '<div class="starring">' + producers2 + '</div>';
+              }
+
+              item += '</td>';
+              if (awards) {
+                item += '<tr><td colspan="2" style="vertical-align: top;">'
+
+
+                item += '<div class="awards">' + awards + '</div>';
+
+                if (awards1) {
+                  item += '<div class="awards">' + awards1 + '</div>';
+                }
+                if (awards2) {
+                  item += '<div class="awards">' + awards2 + '</div>';
+                }
+                if (awards3) {
+                  item += '<div class="awards">' + awards3 + '</div>';
+                }
+                if (awards4) {
+                  item += '<div class="awards">' + awards4 + '</div>';
+                }
+
+                item += '</td>';
+              }
+              item += '</tr></table>';
+
+
+              $('.items').append('<li class="videos">' + item + '</li>');
+
+            });
+          });
+      });
+    });
 
 
   </script>
 
-  
-</head><body>
-<div class="topbar"><a href="index.html"><li class="topline">THE DAWSON BROTHERS</li></a><li class="topline">OUR WORK</li><a href="showreel.html"><li class="topline">SHOWREEL</li></a><a href="contact.html"><li class="topline">CONTACT</li></a></div>
-<div class="graphicbar"><div style="logoStyle"><br><br><img class="logo" src="images/dawsonbroslogoS.png" border="0"><br><br></div></div>
-<br>
-<div class="mainStyle">
-<center><br>
-<div id="show-list">&nbsp;</div>
-<br><br></center>
-</div>
 
-<div class="bottombar"></div>
-<br>
+</head>
 
-</body></html>
+<body>
+  <div class="topbar"><a href="index.html">
+      <li class="topline">THE DAWSON BROTHERS</li>
+    </a>
+    <li class="topline">OUR WORK</li><a href="showreel.html">
+      <li class="topline">SHOWREEL</li>
+    </a><a href="contact.html">
+      <li class="topline">CONTACT</li>
+    </a>
+  </div>
+  <div class="graphicbar">
+    <div style="logoStyle"><br><br><img class="logo" src="images/dawsonbroslogoS.png" border="0"><br><br></div>
+  </div>
+  <br>
+  <div class="mainStyle">
+    <center>
+      <br>
+      <div id="show-list">&nbsp;</div>
+      <br><br>
+    </center>
+  </div>
+
+  <div class="bottombar"></div>
+  <br>
+
+</body>
+
+</html>
