@@ -191,17 +191,12 @@
 
   <script type="text/javascript">
 
-    console.log("Hello");
     $(document).ready(function () {
-      console.log("Hello2");
       $(function listBooks() {
-        console.log("Hello3");
         $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/1bLqN7oA2nNjZID7aGwhjX5z2btnSh3bmt2Y-CAt8PiY/values/Sheet1?alt=JSON&key=AIzaSyCFNHPo-SnAqhK1IHB9xZxpQJyb-yfLooQ",
 
           function (data) {
-            console.log("Hello4");
 
-            console.log(data.values);
 
             data.values.shift();
 
