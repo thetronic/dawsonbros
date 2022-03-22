@@ -31,8 +31,7 @@ function updatePage(jsonShows){
 
 function handleLoad(json){
   console.log(json)
-  const jsonShows = json.values
-  console.log("Shows: ", jsonShows)
+  const jsonShows = json.feed.entry
   updatePage(jsonShows)
 }
 
