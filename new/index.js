@@ -30,9 +30,9 @@ function updatePage(jsonShows){
 }
 
 function handleLoad(json){
-  console.log(json)
-  const jsonShows = json.feed.entry
-  updatePage(jsonShows)
+  json.values.shift()
+  console.log("jsonShows: ",json)
+  updatePage(json)
 }
 
 request.onload = function() {
