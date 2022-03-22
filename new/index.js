@@ -3,6 +3,7 @@ import convertToShowObject from './functions/convertToShowObject.js'
 
 const requestURL = 'https://sheets.googleapis.com/v4/spreadsheets/1bLqN7oA2nNjZID7aGwhjX5z2btnSh3bmt2Y-CAt8PiY/values/Sheet1?alt=JSON&key=AIzaSyCFNHPo-SnAqhK1IHB9xZxpQJyb-yfLooQ'
 const request = new XMLHttpRequest()
+console.log("test")
 request.open('GET', requestURL, true)
 request.send()
 let requestCounter = 10
