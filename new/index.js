@@ -1,7 +1,7 @@
 import createShowCard from './functions/createShowCard.js'
 import convertToShowObject from './functions/convertToShowObject.js'
 
-const requestURL = 'https://spreadsheets.google.com/feeds/list/1bLqN7oA2nNjZID7aGwhjX5z2btnSh3bmt2Y-CAt8PiY/od6/public/full?alt=json'
+const requestURL = 'https://spreadsheets.google.com/feeds/list/1bLqN7oA2nNjZID7aGwhjX5z2btnSh3bmt2Y-CAt8PiY/od6/public/values?alt=json-in-script&callback=?'
 const request = new XMLHttpRequest()
 request.open('GET', requestURL, true)
 request.send()
