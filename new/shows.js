@@ -54,7 +54,7 @@ function updatePage(jsonShows){
 }
 
 function handleLoad(json){
-  const jsonShows = json.feed.entry
+  json.values.shift()
   updatePage(json.values)
 }
 

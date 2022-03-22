@@ -1,5 +1,4 @@
 export default function convertToShowObject(show){
-  console.log("show: ",show)
   const showObject = {}
   showObject['year'] = show[2] 
   showObject['awards'] = [show[10], show[11], show[12], show[13], show[14]]
