@@ -4,7 +4,6 @@ export default function getYears(allShows){
     const year = show.year
     yearArray.push(year)
   })
-  console.log("yearArray: ", yearArray)
   const years = [...new Set(yearArray)]
   const arrayByYear = []
 
