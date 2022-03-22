@@ -11,23 +11,7 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.dawsonbros.com/index.html</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://www.dawsonbros.com/written.html</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://www.dawsonbros.com/done.html</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://www.dawsonbros.com/found.html</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://www.dawsonbros.com/contact.html</loc>
+  <loc>http://www.dawsonbros.com/shows.html</loc>
   <changefreq>monthly</changefreq>
 </url>
 </urlset>
