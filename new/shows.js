@@ -3,7 +3,7 @@ import convertToShowObject from './functions/convertToShowObject.js'
 import getYears from './functions/getYears.js'
 
 
-const requestURL = 'https://spreadsheets.google.com/feeds/list/1bLqN7oA2nNjZID7aGwhjX5z2btnSh3bmt2Y-CAt8PiY/od6/public/full?alt=json'
+const requestURL = 'https://sheets.googleapis.com/v4/spreadsheets/1bLqN7oA2nNjZID7aGwhjX5z2btnSh3bmt2Y-CAt8PiY/values/Sheet1?alt=JSON&key=AIzaSyCFNHPo-SnAqhK1IHB9xZxpQJyb-yfLooQ'
 const request = new XMLHttpRequest()
 request.open('GET', requestURL, true)
 request.send()
@@ -55,7 +55,7 @@ function updatePage(jsonShows){
 
 function handleLoad(json){
   const jsonShows = json.feed.entry
-  updatePage(jsonShows)
+  updatePage(json.values)
 }
 
 request.onload = function() {

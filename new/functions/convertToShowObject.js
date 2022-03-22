@@ -1,14 +1,15 @@
 export default function convertToShowObject(show){
+  console.log("show: ",show)
   const showObject = {}
-  showObject['year'] = show.gsx$year.$t 
-  showObject['awards'] = [show.gsx$awards.$t, show.gsx$awards1.$t, show.gsx$awards2.$t, show.gsx$awards3.$t, show.gsx$awards4.$t]
-  showObject['channel'] = show.gsx$channel.$t
-  showObject['imageurl'] = show.gsx$imageurl.$t
-  showObject['job'] = show.gsx$job.$t
-  showObject['producers'] = [show.gsx$producers1.$t, show.gsx$producers2.$t]
-  showObject['show'] = show.gsx$show.$t
-  showObject['starring'] = show.gsx$starring.$t
-  showObject['id'] = show.gsx$id.$t
-  showObject['highlight'] = show.gsx$highlight.$t
+  showObject['year'] = show[2] 
+  showObject['awards'] = [show[10], show[11], show[12], show[13], show[14]]
+  showObject['channel'] = show[4]
+  showObject['imageurl'] = show[9]
+  showObject['job'] = show[5]
+  showObject['producers'] = [show[7], show[8]]
+  showObject['show'] = show[3]
+  showObject['starring'] = show[6]
+  showObject['id'] = show[0]
+  showObject['highlight'] = show[1]
   return showObject
 }
