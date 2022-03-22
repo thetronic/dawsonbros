@@ -29,6 +29,7 @@ function updatePage(jsonShows){
 }
 
 function handleLoad(json){
+  console.log(json)
   const jsonShows = json.feed.entry
   updatePage(jsonShows)
 }
