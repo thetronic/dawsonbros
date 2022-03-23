@@ -12,6 +12,7 @@
 .contactGenre {
   font-weight: bolder;
   font-size: 17px;
+  padding-bottom: 10px;
 }
 .contact > img {
   width: 100px;
