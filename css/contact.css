@@ -8,8 +8,6 @@
 
 .contact {
   flex-grow: 1;
-  align-items: center;
-  justify-content: center;
 }
 .contactGenre {
   font-weight: bolder;
