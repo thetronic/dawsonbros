@@ -1,0 +1,35 @@
+.contactList {
+  display: flex;
+  position: relative;
+  margin: 0px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contact {
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+.contactGenre {
+  font-weight: bolder;
+  font-size: 17px;
+}
+.contact > img {
+  width: 100px;
+}
+.contactName {
+  font-size: 15px;
+}
+.contactCompany {
+  font-weight: bolder;
+  font-size: 13px;
+}
+.contactPhone {
+  font-weight: bolder;
+  font-size: 13px;
+}
+.contactEmail {
+  font-weight: bolder;
+  font-size: 12px;
+}
