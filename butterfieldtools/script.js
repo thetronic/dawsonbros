@@ -45,5 +45,13 @@ ${content.replace(/\n/g, '\\par\n')}
 
       // Download the RTF file
       downloadRtf(boldedRtfContent)
+
+      // Generate and download PDF
+      const docDefinition = {
+        content: [{ text: cleanedText, margin: [0, 10] }],
+      }
+
+      const pdfDocGenerator = pdfMake.createPdf(docDefinition)
+      pdfDocGenerator.download('modified_text.pdf')
     })
 })
