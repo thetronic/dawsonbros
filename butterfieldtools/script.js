@@ -25,10 +25,7 @@ ${content.replace(/\n/g, '\\par\n')}
       const modifiedText = inputText.replace(regexPattern, '')
       const cleanedText = modifiedText.replace(/\n{3,}/g, '\n')
 
-      const boldedRtfContent = cleanedText.replace(
-        /(<LIGHTING - .*>)|(<MUSIC - .*>)/g,
-        '{\\b $& }',
-      )
+      const boldedRtfContent = cleanedText.replace(/<([^>]*)>/g, '{\\b $1 }')
 
       // Create a Blob with the cleaned text for TXT file
       const txtBlob = new Blob([cleanedText], { type: 'text/plain' })
@@ -48,7 +45,15 @@ ${content.replace(/\n/g, '\\par\n')}
 
       // Generate and download PDF
       const docDefinition = {
-        content: [{ text: cleanedText, margin: [0, 10] }],
+        content: [
+          {
+            text: cleanedText.replace(/<([^>]*)>/g, (match, group) => ({
+              text: group,
+              bold: true,
+            })),
+            margin: [0, 10],
+          },
+        ],
       }
 
       const pdfDocGenerator = pdfMake.createPdf(docDefinition)
