@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const regexPattern = /({.*})|(<.*>)|((##)(\n|.)*?(##))/g
       const modifiedText = inputText.replace(regexPattern, '')
-      const cleanedText = modifiedText.replace(/\n{3,}/g, '\n')
+      const cleanedText = modifiedText
+        .replace(/\n{3,}/g, '\n')
+        .replace(/(.)\n(\[|<|\||\w|\d)/g, '$1\n\n$2')
+        .replace(/(.)\n(\[|<|\|)/g, '$1\n\n$2')
 
       // Create a Blob with the cleaned text for TXT file
       const txtBlob = new Blob([cleanedText], { type: 'text/plain' })
@@ -25,7 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
       const pdfContent = []
       const regexPatternPDF = /({.*})|(<KEYNOTE - .*>)|((##)(\n|.)*?(##))/g
       const modifiedTextPDF = inputText.replace(regexPatternPDF, '')
-      const cleanedTextPDF = modifiedTextPDF.replace(/\n{3,}/g, '\n')
+      const cleanedTextPDF = modifiedTextPDF
+        .replace(/\n{3,}/g, '\n')
+        .replace(/(.)\n(\[|<|\||\w|\d)/g, '$1\n\n$2')
+        .replace(/(.)\n(\[|<|\|)/g, '$1\n\n$2')
       let lineNumber = 1
       cleanedTextPDF.split(/<([^>]*)>/).forEach((part, index) => {
         if (index % 2 === 0) {
