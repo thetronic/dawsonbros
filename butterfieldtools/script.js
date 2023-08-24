@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const regexPattern = /({.*})|(<.*>)|((##)(\n|.)*?(##))/g
       const modifiedText = inputText.replace(regexPattern, '')
       const cleanedText = modifiedText
-        .replace(/\n{3,}/g, '\n')
+        .replace(/\n{3,}/g, '\n\n')
         .replace(/(.)\n(\[|<|\|)/g, '$1\n\n$2')
         .replace(/(\]|>|\|)\n(.)/g, '$1\n\n$2')
 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const regexPatternPDF = /({.*})|(<KEYNOTE - .*>)|((##)(\n|.)*?(##))/g
       const modifiedTextPDF = inputText.replace(regexPatternPDF, '')
       const cleanedTextPDF = modifiedTextPDF
-        .replace(/\n{3,}/g, '\n')
+        .replace(/\n{3,}/g, '\n\n')
         .replace(/(.)\n(\[|<|\|)/g, '$1\n\n$2')
         .replace(/(\]|>|\|)\n(.)/g, '$1\n\n$2')
       let lineNumber = 1
