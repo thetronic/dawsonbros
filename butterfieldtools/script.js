@@ -34,6 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
         .replace(/(\]|>|\|)\n(.)/g, '$1\n\n$2')
       let lineNumber = 1
       cleanedTextPDF.split(/<([^>]*)>/).forEach((part, index) => {
+        var colour = 'cyan'
+        if (part.includes('LIGHTING')) {
+          colour = 'yellow'
+        }
         if (index % 2 === 0) {
           pdfContent.push(part)
         } else {
@@ -41,13 +45,13 @@ document.addEventListener('DOMContentLoaded', function () {
             pdfContent.push('', {
               text: `${lineNumber++}. ${part}`,
               bold: true,
-              background: 'yellow',
+              background: colour,
             })
           } else {
             pdfContent.push({
               text: `${lineNumber++}. ${part}`,
               bold: true,
-              background: 'yellow',
+              background: colour,
             })
           }
         }
