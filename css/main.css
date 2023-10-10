@@ -113,6 +113,7 @@ body {
   margin: 20px;
   flex-grow: 1;
 }
+
 .boxImage {
   margin: 0px;
   height: 230px;
@@ -128,6 +129,17 @@ body {
 .titleText {
   margin: 10px;
   font-weight:bolder;
+}
+
+.showsLinkBox {
+  display: flex;
+  border-radius: 20px;
+  background-color: var(--boxcolor);
+  width: 100px;
+  padding: 10px 15px 10px 15px;
+  margin: 10px 0px 0px 0px;
+  align-items: center;
+  justify-content: center;
 }
 
 
