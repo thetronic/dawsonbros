@@ -1,4 +1,4 @@
-export default function createShowCard(show){
+export default function createShowCard(show) {
   // const id = show['id']
 
   const showCard = document.createElement('div')
@@ -21,35 +21,36 @@ export default function createShowCard(show){
   showProducers.className = 'showProducers'
   showAwards.className = 'showAwards'
 
-  // showCard.onclick = function() { 
-  //   location.href = 'show.html?id=' + id 
+  // showCard.onclick = function() {
+  //   location.href = 'show.html?id=' + id
   // }
-  showImage.style.backgroundImage = 'url(\'' + show['imageurl'].replace("http:", "https:") + '\')'
-  if (show['show'] !== ''){
+  showImage.style.backgroundImage =
+    "url('" + show['imageurl'].replace('http:', 'https:') + "')"
+  if (show['show'] !== '') {
     showTitle.innerHTML = show['show'].toUpperCase()
     showOverlay.appendChild(showTitle)
   }
-  if (show['channel'] !== ''){
+  if (show['channel'] !== '') {
     showChannel.innerHTML = show['channel']
     showOverlay.appendChild(showChannel)
   }
-  if (show['job'] !== ''){
+  if (show['job'] !== '') {
     showJob.innerHTML = show['job']
     showOverlay.appendChild(showJob)
   }
-  if (show['starring'] !== ''){
+  if (show['starring'] !== '') {
     showStarring.innerHTML = show['starring']
     showOverlay.appendChild(showStarring)
   }
 
-  if (show['producers'][0] !== ''){
+  if (show['producers'][0] !== '') {
     const producers = show['producers'].filter((a) => a).join('<br>')
     showProducers.innerHTML = producers
     showOverlay.appendChild(showProducers)
   }
-  if (show['awards'][0] !== ''){
+  if (show['awards'][0] !== '') {
     const awards = show['awards'].filter((a) => a)
-    awards.forEach( award => {
+    awards.forEach((award) => {
       const singleAward = document.createElement('div')
       singleAward.className = 'showAwards'
       singleAward.innerHTML = '&#127942; ' + award
