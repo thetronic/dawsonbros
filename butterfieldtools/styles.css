@@ -31,6 +31,11 @@ textarea {
   border-radius: 3px;
 }
 
+.checkboxSelection {
+  display: flex;
+  flex-direction: row;
+}
+
 button {
   display: block;
   margin: 10px auto;
