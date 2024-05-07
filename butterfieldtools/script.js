@@ -3,7 +3,7 @@ function removeExcessNewlines(text) {
 }
 
 function createTextAndCues(textArray) {
-  let textAndCueArray = []
+  const textAndCueArray = []
   let lineCount = 0
   for (let i = 0; i < textArray.length; i++) {
     const line = textArray[i]
@@ -59,15 +59,20 @@ function createPDF(textAndCues, width, doc, cueType) {
     const splitLines = doc.splitTextToSize(line, splitWidth)
     for (let j = 0; j < splitLines.length; j++) {
       let splitLine = splitLines[j]
-      if (splitLine.includes('SEQ')) {
-        lineYPosition = addNewPage(
-          doc,
-          lineYPosition,
-          cueIndent,
-          pageHeight,
-          topMargin,
-        )
+
+      //NEW PAGE ONLY IF SEQ IS NOT THE FIRST THING ON PAGE
+      if (!splitLine.includes('SEQ01')) {
+        if (splitLine.includes('SEQ')) {
+          lineYPosition = addNewPage(
+            doc,
+            lineYPosition,
+            cueIndent,
+            pageHeight,
+            topMargin,
+          )
+        }
       }
+
       if (splitLine.match(/(?<!\|)([^|]+)(?!\|)/)) {
         // |SEQ00| match
         splitLine = splitLine.replaceAll('|', '')
@@ -154,8 +159,9 @@ async function generatePdf(textInput, docType, docName) {
 
   const textWithSingleNewLines = removeExcessNewlines(textInput)
 
-  const regexPatternPDF = /({.*})|((##)(\n|.)*?(##))/g
-  const modifiedTextPDF = textWithSingleNewLines.replace(regexPatternPDF, '')
+  // const regexPatternPDF = /({.*})|((##)(\n|.)*?(##))/g
+  // const modifiedTextPDF = textWithSingleNewLines.replace(regexPatternPDF, '')
+  const modifiedTextPDF = textWithSingleNewLines.replaceAll('##', '').trim()
 
   const textArray = modifiedTextPDF.split('\n')
 
