@@ -94,12 +94,18 @@ function createPDF(textAndCues, width, doc, cueType) {
       if (cueType === 'AV') {
         cueRegex = /^AV:/
       }
+      if (cueType === 'ALL') {
+        cueRegex = /^(LX|SQ|AV):/
+      }
       if (cue.match(cueRegex)) {
         if (isFirstCue) {
           doc.line(lineIndent, yPosition, lineEnd, yPosition)
           isFirstCue = false
         }
         doc.setFontSize(9)
+        if (cueType === 'ALL' && cue.match(/^(LX|SQ):/)) {
+          doc.setTextColor(0, 0, 255)
+        }
         doc.setFont('Helvetica', 'normal')
         const cueSplit = doc.splitTextToSize(cue, cueLength)
         let trimmedCue = cueSplit[0]
@@ -108,6 +114,7 @@ function createPDF(textAndCues, width, doc, cueType) {
         }
         doc.text(trimmedCue, cueIndent, yPosition - 1)
         yPosition -= lineHeight
+        doc.setTextColor(0, 0, 0)
       }
     }
     lineYPosition += lineHeight //Add a space between lines
@@ -186,14 +193,43 @@ document.addEventListener('DOMContentLoaded', function () {
       const tech = document.getElementById('tech').checked
       const av = document.getElementById('av').checked
       const cue = document.getElementById('cue').checked
+      const all = document.getElementById('all').checked
+
+      const today = new Date()
+      const yy = today.getFullYear().toString().substr(-2)
+      let mm = today.getMonth() + 1
+      let dd = today.getDate()
+
+      if (dd < 10) dd = '0' + dd
+      if (mm < 10) mm = '0' + mm
+      const formattedToday = dd + mm + yy
+
       if (tech) {
-        generatePdf(text, 'TECH', 'Butterfield_Tech_Script.pdf')
+        generatePdf(
+          text,
+          'TECH',
+          'Butterfield_Tech_Script_' + formattedToday + '.pdf',
+        )
       }
       if (av) {
-        generatePdf(text, 'AV', 'Butterfield_AV_Script.pdf')
+        generatePdf(
+          text,
+          'AV',
+          'Butterfield_AV_Script_' + formattedToday + '.pdf',
+        )
+      }
+      if (all) {
+        generatePdf(
+          text,
+          'ALL',
+          'Butterfield_All_Cues_Script_' + formattedToday + '.pdf',
+        )
       }
       if (cue) {
-        createCueTextfile(text, 'Butterfield_Cue_Script.txt')
+        createCueTextfile(
+          text,
+          'Butterfield_Cue_Script_' + formattedToday + '.txt',
+        )
       }
     })
 })
