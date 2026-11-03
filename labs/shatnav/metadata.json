@@ -1,0 +1,6 @@
+{
+  "name": "Shatnav",
+  "description": "Peer-to-peer private bathroom sharing network powered by Google Maps. Rent nearby private toilets in homes ($1 for a wee, $2 for a poo) with verified cleanliness ratings and turn-by-turn navigation.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

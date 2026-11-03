@@ -1,0 +1,6 @@
+{
+  "name": "Brian Butterfield's Treat Day Defender",
+  "description": "Fight away tempting Treat Day foods with Brian Butterfield until Sunday's glorious feast, subsisting only on one cornflake, an ice cube, and room temperature water.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
