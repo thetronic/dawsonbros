@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { GameMode } from '../types';
 import { Play, Flame, UtensilsCrossed, Shield, Volume2, VolumeX, Mic, MicOff } from 'lucide-react';
+import { BRIAN_IMAGE_URL } from '../game/constants';
 
 interface TitleScreenProps {
   onStart: (mode: GameMode) => void;
@@ -64,7 +65,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
         <div className="relative group shrink-0">
           <div className="w-56 h-72 sm:w-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-slate-700 shadow-2xl relative bg-slate-900">
             <img
-              src="/assets/aistudio/image_b53d7ec1.png"
+              src={BRIAN_IMAGE_URL}
               alt="Brian Butterfield"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover object-top filter contrast-105"

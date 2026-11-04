@@ -213,3 +213,17 @@ export const BUTTERFIELD_QUOTES = [
   'I can resist!',
   'Potato grids, unhand me!',
 ];
+
+/**
+ * Resolves an asset path to be strictly relative to the current deployed subdirectory.
+ * Works whether deployed at root `/` or in any subfolder like `/labs/brain_butterfields_treat_day_defender/`.
+ */
+export function getAssetUrl(relativePath: string): string {
+  const clean = relativePath.startsWith('/') ? relativePath.slice(1) : relativePath;
+  const base = import.meta.env.BASE_URL || './';
+  const prefix = base.endsWith('/') ? base : `${base}/`;
+  return `${prefix}${clean}`;
+}
+
+export const BRIAN_IMAGE_URL = getAssetUrl('assets/aistudio/image_b53d7ec1.png');
+

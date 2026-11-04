@@ -11,7 +11,7 @@ import {
   Shockwave,
   TreatFoodType,
 } from '../types';
-import { DAYS_CONFIG, FOOD_DATABASE, BUTTERFIELD_QUOTES } from './constants';
+import { DAYS_CONFIG, FOOD_DATABASE, BUTTERFIELD_QUOTES, BRIAN_IMAGE_URL } from './constants';
 import { sound } from '../audio/soundEngine';
 
 export class GameEngine {
@@ -98,7 +98,7 @@ export class GameEngine {
 
   private loadBrianImage() {
     this.brianImg = new Image();
-    this.brianImg.src = '/assets/aistudio/image_b53d7ec1.png';
+    this.brianImg.src = BRIAN_IMAGE_URL;
     this.brianImg.onload = () => {
       this.brianImgLoaded = true;
     };
